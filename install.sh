@@ -54,7 +54,7 @@ mkdir -p "$ZSH_CUSTOM/plugins"
 
 # 4. Deploying Dotfiles via Stow
 echo -e "${BLUE}[*] Linking A7R Soul to Home...${NC}"
-DOT_COMPONENTS=("hypr" "waybar" "rofi" "kitty" "fastfetch")
+DOT_COMPONENTS=("hypr" "waybar" "rofi" "kitty" "fastfetch" "nvim")
 
 for component in "${DOT_COMPONENTS[@]}"; do
     echo "Stowing $component..."
