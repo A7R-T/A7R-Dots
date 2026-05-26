@@ -1,0 +1,166 @@
+/*
+ * Everforest theme for Rofi
+ * Base Color: Everforest Green (#A7C080)
+ * Font: Hurmit Nerd Font
+ */
+
+configuration {
+    modi: "drun,run,ssh";
+    show-icons: true;
+    display-drun: "Apps";
+    display-run: "Run";
+    display-ssh: "SSH";
+    sidebar-mode: false;
+    font: "Hurmit Nerd Font 10";
+}
+
+/* Everforest Palette Definitions */
+* {
+    /* Base Color: Everforest Green */
+    accent-color:    #A7C080;
+
+    /* Backgrounds: Everforest dark colors */
+    bg-primary:      #2D353B73; /* Main box background with transparency */
+    bg-secondary:    #47525873; /* Input bar/alternate background */
+    
+    /* Text Colors */
+    fg-main:         #D3C6AA;   /* Main text color */
+    fg-alt:          #7FBBB3;   /* Muted text color for context */
+
+    /* Universal transparent setting */
+    transparent:     #00000000;
+}
+
+/* --------------------------------------------------------------------------
+ * Main Window: Fully transparent and centered.
+ * -------------------------------------------------------------------------- */
+window {
+    background-color: @transparent;
+    border: 0;
+    padding: 0;
+    width: 37%;
+    location: center;
+    anchor: center;
+    border-radius: 17px;
+}
+
+/* --------------------------------------------------------------------------
+ * Main Box: The colored container that provides elevation/depth.
+ * -------------------------------------------------------------------------- */
+mainbox {
+    background-color: @bg-primary;
+    border: 1px solid;
+    border-color: @fg-alt;
+    padding: 27px;
+    border-radius: 17px;
+}
+
+/* --------------------------------------------------------------------------
+ * Input Bar: Clean, simple box for search.
+ * -------------------------------------------------------------------------- */
+inputbar {
+    children: [ prompt, entry ];
+    background-color: @bg-secondary;
+    border: 1px solid;
+    border-color: @fg-alt;
+    padding: 12px;
+    spacing: 15px;
+    border-radius: 12px;
+    margin: 0 0 15px 0;
+}
+
+prompt {
+    enabled: true;
+    background-color: @transparent;
+    text-color: @accent-color;
+}
+
+entry {
+    background-color: @transparent;
+    text-color: @fg-main;
+    placeholder-color: @fg-alt;
+    placeholder: "Search applications or commands...";
+}
+
+/* --------------------------------------------------------------------------
+ * List View
+ * -------------------------------------------------------------------------- */
+listview {
+    background-color: @transparent;
+    columns: 1;
+    lines: 7;
+    spacing: 7px;
+    cycle: true;
+    dynamic: true;
+    layout: vertical;
+    fixed-height: false;
+}
+
+/* --------------------------------------------------------------------------
+ * Elements (Individual rows)
+ * -------------------------------------------------------------------------- */
+element normal.normal {
+  background-color: @transparent;
+  text-color: @fg-alt;
+}
+
+element normal.urgent {
+  background-color: @transparent;
+  text-color: @fg-alt;
+}
+
+element normal.active {
+  background-color: @transparent;
+  text-color: @fg-alt;
+}
+
+element alternate.normal {
+  background-color: @transparent;
+  text-color: @fg-alt;
+}
+
+element {
+    background-color: @transparent;
+    text-color: @fg-alt;
+    padding: 5px;
+    border-radius: 7px;
+    spacing: 7px;
+}
+
+element-icon {
+    size: 1.3em;
+    background-color: @transparent;
+    text-color: inherit;
+}
+
+element-text {
+    background-color: @transparent;
+    text-color: inherit;
+}
+
+/* Highlighted (Selected) Element */
+element selected {
+    background-color: @accent-color;
+    text-color: @bg-primary;
+    border: 0;
+}
+
+element selected.normal {
+    background-color: @fg-alt;
+    text-color: #2D353B;
+    border: 0;
+}
+
+element selected element-text {
+    text-color: @bg-primary;
+}
+
+element selected element-icon {
+    text-color: @bg-primary;
+}
+
+scrollbar {
+  width: 0;
+  handle-width: 0;
+  handle-color: transparent;
+}
