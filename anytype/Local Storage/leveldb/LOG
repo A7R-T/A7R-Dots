@@ -1,0 +1,15 @@
+2026/06/05-18:38:24.471 1c74 Reusing MANIFEST /home/a7r/.config/anytype/Local Storage/leveldb/MANIFEST-000001
+2026/06/05-18:38:24.528 1c74 Recovering log #524
+2026/06/05-18:38:24.529 1c74 Reusing old log /home/a7r/.config/anytype/Local Storage/leveldb/000524.log 
+2026/06/05-18:52:49.591 1c74 Level-0 table #528: started
+2026/06/05-18:52:49.595 1c74 Level-0 table #528: 31138 bytes OK
+2026/06/05-18:52:49.599 1c74 Delete type=0 #524
+2026/06/05-18:52:49.600 1c74 Compacting 4@0 + 1@1 files
+2026/06/05-18:52:49.604 1c74 Generated table #529@0: 386 keys, 15040 bytes
+2026/06/05-18:52:49.604 1c74 Compacted 4@0 + 1@1 files => 15040 bytes
+2026/06/05-18:52:49.606 1c74 compacted to: files[ 0 1 1 0 0 0 0 ]
+2026/06/05-18:52:49.606 1c74 Delete type=2 #523
+2026/06/05-18:52:49.607 1c74 Delete type=2 #521
+2026/06/05-18:52:49.607 1c74 Delete type=2 #528
+2026/06/05-18:52:49.607 1c74 Delete type=2 #518
+2026/06/05-18:52:49.607 1c74 Delete type=2 #525

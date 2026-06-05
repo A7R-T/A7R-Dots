@@ -1,0 +1,181 @@
+/* 
+    Authentic7Romany - Anytype Theme
+    Philosophy: Glassy, Centered, Symmetrical, Transparent.
+*/
+
+:root {
+    --a7r-bg: #121E2B;
+    --a7r-bg-rgb: 18, 30, 43;
+    --a7r-fg: #80A5C0;
+    --a7r-fg-rgb: 128, 165, 192;
+    --a7r-glass-bg: rgba(var(--a7r-bg-rgb), 0.4);
+    --a7r-glass-border: rgba(var(--a7r-fg-rgb), 0.2);
+    --font-family: "Hurmit Nerd Font", monospace;
+    
+    /* Global Overrides */
+    --color-bg-primary: transparent !important;
+    --color-bg-secondary: var(--a7r-glass-bg) !important;
+    --color-bg-tertiary: var(--a7r-glass-bg) !important;
+    --color-text-primary: var(--a7r-fg) !important;
+    --color-text-secondary: rgba(var(--a7r-fg-rgb), 0.7) !important;
+}
+
+/* --- 1. GLOBAL RESETS --- */
+* {
+    font-family: var(--font-family) !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    border-color: var(--a7r-glass-border) !important;
+}
+::-webkit-scrollbar { display: none !important; }
+
+html, body {
+    /* background: transparent !important; */
+    background: url(/home/a7r/Pictures//Wallpapers/A7R-Wallpaper-Anime-2-Dark.png);
+    background-size: cover !important;
+    background-position: center !important;
+    background-repeat: no-repeat !important;
+    background-attachment: fixed !important;
+    color: var(--a7r-fg) !important;
+}
+
+body, #root {
+  backdrop-filter: blur(37px) saturate(1.15) brightness(0.93) !important;
+}
+/* --- 2. THE GLASS & TRANSPARENCY SYSTEM --- */
+
+.sidebar, .sidebar .pageWrapper, .sidebar .subPageWrapper, .sidebar .sidebarPage, [data-testid="sidebar"] {
+    background-color: transparent !important;
+    background: transparent !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+.pageFlex, .any-app-layout, #header, #bodyWrapper, #editorWrapper, 
+.any-main-container, .pageMain, .blocks, #page {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+.vault, .root-loader {
+    /* background-color: var(--a7r-bg) !important; */
+    background-color: transparent !important;
+    backdrop-filter: blur(73px) saturate(1.7) brightness(0.9) !important;
+}
+
+.menus .menu, .popup, .modal, .widget:not(#widget-space),
+.listPreviewObject .item .previewObject,
+.blocks .block.blockDataview .viewContent.viewGallery .card,
+.blocks .block.blockDataview .viewContent.viewBoard .cardContent,
+.blocks .block.blockLink.card .linkCard,
+.block.blockText.textCallout>.wrapContent, html.themeDark .socialBlock .commentCounter
+/* [class*="menu"], [id*="menu"] */
+{
+    background-color: var(--a7r-glass-bg) !important;
+    border: 1px solid var(--a7r-glass-border) !important;
+    border-radius: 12px !important;
+}
+.blocks .block.blockLink.card .linkCard .side.left, .blocks .block.blockDataview .viewContent.viewGallery .card .cardContent>.inner {
+  align-items: center !important;
+}
+
+/* --- 3. CENTRALIZATION & COMPACT SPACING --- */
+.editorWrapper.withIcon .editorControls {
+  height: 70px !important;
+  display: flex;
+  align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, .any-text, .editableWrap #value {
+    text-align: center !important;
+    color: var(--a7r-fg) !important;
+}
+
+/* FIX: Nuke huge margins around editor and content */
+.editorWrapper, .pageMain, .blocks, .any-main-container {
+    padding: 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+.blocks .block > .wrapContent:not(.blocks .block.blockLayout.layoutColumn > div, .wrapContent:has(.children), .headSimple.isCollection.align0.withIcon .wrapContent) {
+    margin: 0 auto !important;
+    padding: 10px 58px 10px 10px !important; /* Balanced padding */
+}
+
+/* Sidebar Toggle Buttons - Fix stacking */
+.sidebar .head, .sidebar .head .sides {
+    display: flex !important;
+    flex-direction: row !important; /* Force horizontal */
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: transparent !important;
+}
+
+/* Dataview Header Centering */
+.blocks .block.blockDataview .dataviewHead {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+}
+
+/* --- 4. DIMENSIONS & SPECIFIC FIXES --- */
+
+#header { height: auto !important; min-height: 40px !important; padding: 0px !important; }
+
+.blocks .block.blockIconPage .iconObject.withImage,
+.blocks .block.blockDataview .viewContent.viewGraph canvas {
+    background-color: transparent !important;
+}
+
+* { color: var(--a7r-fg); }
+
+button, .button, .btn:not(.cell.add .btn), .sidebar .sidebarPage>.bottom .side>.sync {
+    background-color: var(--a7r-glass-bg) !important;
+    border: 1px solid var(--a7r-glass-border) !important;
+    color: var(--a7r-fg) !important;
+    border-radius: 8px !important;
+}
+
+/* --- 5. CLEANUP --- */
+[style*="background"]:not(.sidebar):not(.menu):not(.card):not(.popup) {
+    background-color: transparent !important;
+}
+
+.headSimple .sides {
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 17px 32px !important;
+}
+.editorWrapper.isSet.withIcon .headSimple .side.left, .editorWrapper.isSet.withIconAndCover .headSimple .side.left, .editorWrapper.isCollection.withIcon .headSimple .side.left, .editorWrapper.isCollection.withIconAndCover .headSimple .side.left, .editorWrapper.isType.withIcon .headSimple .side.left, .editorWrapper.isType.withIconAndCover .headSimple .side.left
+{
+  width: auto;
+}
+.listInline {
+  margin-left: none !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+.widget.widgetSpace .spaceData .head, .widget.widgetSpace .spaceStream .head {
+  padding: 7px !important;
+}
+.widget .head {
+  padding: 7px 7px 0 7px !important;
+}
+
+html.themeDark .socialBlock {
+  background: linear-gradient(to bottom,#121E2B00,#121E2B0a,#121E2B2e,#121E2B80,#121E2Bd1,#121E2Bf5);
+}
+
+.sidebar .sidebarPage.pageWidget>.head:after, .sidebar .sidebarPage.pageWidgetManage>.head:after, .widget.widgetSpace:after {
+  background: linear-gradient(90deg,rgba(247,247,247,0) 0%,rgba(247,247,247,0) 100%)
+}
+.sidebar .sidebarPage.pageVault>.bottom .grad {
+  background: transparent !important;
+}
+.widget.widgetSpace .iconHead {
+  align-items: center !important;
+  justify-content: center !important;
+}
