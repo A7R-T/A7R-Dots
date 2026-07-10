@@ -1,0 +1,63 @@
+* {
+    font-family: "Hurmit Nerd Font", sans-serif;
+    font-size: 14px;
+}
+
+window {
+    background-color: rgba(25, 43, 58, 0.85);
+}
+
+button {
+    background-color: rgba(62, 99, 131, 0.6);
+    color: #8fb8d5;
+    border-radius: 12px;
+    border: 1px solid rgba(80, 127, 163, 0.5);
+    padding: 20px;
+    margin: 10px;
+    min-width: 180px;
+    min-height: 120px;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: rgba(76, 123, 157, 0.8);
+    border-color: rgba(99, 153, 192, 0.7);
+}
+
+button:active {
+    background-color: rgba(80, 127, 163, 0.9);
+    border-color: rgba(102, 155, 193, 0.8);
+}
+
+button image {
+    min-width: 64px;
+    min-height: 64px;
+    margin-bottom: 8px;
+}
+
+button label {
+    color: #8fb8d5;
+    font-size: 13px;
+    font-weight: bold;
+    margin-top: 4px;
+}
+
+#logout button,
+#suspend button,
+#hibernate button,
+#shutdown button,
+#reboot button,
+#lock button {
+    background-color: rgba(62, 99, 131, 0.6);
+    border-color: rgba(80, 127, 163, 0.5);
+}
+
+#logout button:hover,
+#suspend button:hover,
+#hibernate button:hover,
+#shutdown button:hover,
+#reboot button:hover,
+#lock button:hover {
+    background-color: rgba(76, 123, 157, 0.8);
+    border-color: rgba(99, 153, 192, 0.7);
+}

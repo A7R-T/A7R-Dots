@@ -1,0 +1,1 @@
+set -gx FZF_DEFAULT_OPTS "   --color=bg:#101417,bg+:#181C20,fg:#DFE3E8,fg+:#DFE3E8   --color=hl:#8ACEFF,hl+:#8ACEFF,pointer:#8ACEFF,marker:#C9E6FF   --color=info:#C1C7CE,prompt:#8ACEFF,spinner:#C9E6FF,header:#8ACEFF   --color=gutter:#101417"

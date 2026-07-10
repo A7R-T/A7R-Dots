@@ -1,0 +1,2 @@
+[General]
+commands="@ByteArray({\"9ef815bf_26d1_4216_87ad_895d853a7d2b\":{\"command\":\"systemctl suspend\",\"name\":\"Suspend\"}})"

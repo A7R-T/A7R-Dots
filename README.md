@@ -15,9 +15,10 @@ To inject the A7R soul into a fresh Arch/CachyOS install:
 ```bash
 git clone https://github.com/Authentic7Romany/A7R-dots.git
 cd A7R-dots
-chmod +x install.sh
-./install.sh
+cp .config/ ~/
+cp .local/ ~/
+cp heroic-a7r-theme/ ~/
 ```
 
 ## ⚖️ License
-Authentic7Romany - All Rights Reserved.
+A7R - All Rights Reserved.

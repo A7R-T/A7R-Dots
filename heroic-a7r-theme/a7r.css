@@ -1,0 +1,48 @@
+/* A7R Heroic Theme - Generated from kitty monochrome palette */
+
+body.a7r {
+  --accent: #669BC1;
+  --accent-overlay: #3E6383;
+  --navbar-accent: #669BC1;
+  --background: #192B3A;
+  --body-background: #192B3A;
+  --background-darker: #142433;
+  --current-background: var(--body-background);
+  --navbar-background: #203746;
+  --navbar-active-background: #1E3344;
+  --success: #6DA6CE;
+  --success-hover: #8fb8d5;
+  --input-background: #203746;
+  --modal-background: #1E3344;
+  --modal-border: #3E6383;
+  --primary: #669BC1;
+  --primary-hover: #8fb8d5;
+  --danger: #3E6383;
+  --danger-hover: #192B3A;
+  --anticheat-denied: #3E6383;
+  --anticheat-broken: #192B3A;
+  --anticheat-running: #6DA6CE;
+  --anticheat-supported: #669BC1;
+  --anticheat-planned: #507FA3;
+  --text-title: #8fb8d5;
+  --icons-background: #203746;
+  --action-icon: #6DA6CE;
+  --action-icon-hover: #669BC1;
+  --action-icon-active: #8fb8d5;
+  --icon-disabled: #3E6383;
+  --play-button: #669BC1;
+  --primary-button: #669BC1;
+  --button-stroke: #6DA6CE;
+  --secondary-button: #669BC1;
+  --secondary-button-overlay: #8fb8d5;
+  --success-button: #6DA6CE;
+  --disabled-button: #3E6383;
+  --disabled-button-overlay: #507FA3;
+  --cancel-button: #3E6383;
+  --cancel-button-overlay: #192B3A;
+  --download-button: #669BC1;
+  --download-button-overlay: #8fb8d5;
+  --install-button: #669BC1;
+  --gamecard-title-color: #142433;
+  --text-gametitle: #8fb8d5;
+}

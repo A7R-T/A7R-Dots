@@ -1,0 +1,190 @@
+/* A7R Anytype Dynamic Theme - kitty monochrome */
+
+:root {
+    --a7r-bg: #192B3A;
+    --a7r-bg-rgb: 25, 43, 58;
+    --a7r-fg: #8fb8d5;
+    --a7r-fg-rgb: 143, 184, 213;
+    --a7r-glass-bg: rgba(var(--a7r-bg-rgb), 0.4);
+    --a7r-glass-border: rgba(var(--a7r-fg-rgb), 0.2);
+    --a7r-surface: #203746;
+    --a7r-muted: #3E6383;
+    --a7r-subtle: #6DA6CE;
+    --a7r-secondary: #6399C0;
+    --a7r-accent: #669BC1;
+    --a7r-accent-rgb: 102, 155, 193;
+    --a7r-highlight: #8fb8d5;
+    --a7r-emphasis: #8fb8d5;
+    --a7r-emphasis-rgb: 143, 184, 213;
+    --font-family: "Hurmit Nerd Font", monospace;
+
+    --color-bg-primary: transparent !important;
+    --color-bg-secondary: var(--a7r-glass-bg) !important;
+    --color-bg-tertiary: var(--a7r-glass-bg) !important;
+    --color-text-primary: var(--a7r-fg) !important;
+    --color-text-secondary: rgba(var(--a7r-fg-rgb), 0.7) !important;
+}
+
+* {
+    font-family: var(--font-family) !important;
+    box-shadow: none !important;
+    text-shadow: none !important;
+    scrollbar-width: none !important;
+    -ms-overflow-style: none !important;
+    border-color: var(--a7r-glass-border) !important;
+}
+::-webkit-scrollbar { display: none !important; }
+
+html, body {
+    background: var(--a7r-bg) !important;
+    color: var(--a7r-fg) !important;
+}
+
+body, #root {
+  backdrop-filter: blur(37px) saturate(1.15) brightness(0.93) !important;
+}
+
+.sidebar, .sidebar .pageWrapper, .sidebar .subPageWrapper, .sidebar .sidebarPage, [data-testid="sidebar"] {
+    background-color: transparent !important;
+    background: transparent !important;
+    backdrop-filter: blur(20px) !important;
+}
+
+.pageFlex, .any-app-layout, #header, #bodyWrapper, #editorWrapper,
+.any-main-container, .pageMain, .blocks, #page {
+    background-color: transparent !important;
+    background: transparent !important;
+}
+
+.vault, .root-loader {
+    background-color: transparent !important;
+    backdrop-filter: blur(73px) saturate(1.7) brightness(0.9) !important;
+}
+
+.menus .menu, .popup, .modal, .widget:not(#widget-space),
+.listPreviewObject .item .previewObject,
+.blocks .block.blockDataview .viewContent.viewGallery .card,
+.blocks .block.blockDataview .viewContent.viewBoard .cardContent,
+.blocks .block.blockLink.card .linkCard,
+.block.blockText.textCallout>.wrapContent, html.themeDark .socialBlock .commentCounter {
+    background-color: var(--a7r-glass-bg) !important;
+    border: 1px solid var(--a7r-glass-border) !important;
+    border-radius: 12px !important;
+}
+.blocks .block.blockLink.card .linkCard .side.left, .blocks .block.blockDataview .viewContent.viewGallery .card .cardContent>.inner {
+  align-items: center !important;
+}
+
+.editorWrapper.withIcon .editorControls {
+  height: 70px !important;
+  display: flex;
+  align-items: center;
+}
+
+h1, h2, h3, h4, h5, h6, p, span, .any-text, .editableWrap #value {
+    text-align: center !important;
+    color: var(--a7r-fg) !important;
+}
+
+.editorWrapper, .pageMain, .blocks, .any-main-container {
+    padding: 0 !important;
+    margin: 0 auto !important;
+    width: 100% !important;
+}
+
+.blocks .block > .wrapContent:not(.blocks .block.blockLayout.layoutColumn > div, .wrapContent:has(.children), .headSimple.isCollection.align0.withIcon .wrapContent) {
+    margin: 0 auto !important;
+    padding: 10px 58px 10px 10px !important;
+}
+
+.sidebar .head, .sidebar .head .sides {
+    display: flex !important;
+    flex-direction: row !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    background: transparent !important;
+}
+
+.blocks .block.blockDataview .dataviewHead {
+    display: flex !important;
+    justify-content: center !important;
+    width: 100% !important;
+    margin-bottom: 20px !important;
+}
+
+#header { height: auto !important; min-height: 40px !important; padding: 0px !important; }
+
+.blocks .block.blockIconPage .iconObject.withImage,
+.blocks .block.blockDataview .viewContent.viewGraph canvas {
+    background-color: transparent !important;
+}
+
+* { color: var(--a7r-fg); }
+
+button, .button, .btn:not(.cell.add .btn), .sidebar .sidebarPage>.bottom .side>.sync {
+    background-color: var(--a7r-glass-bg) !important;
+    border: 1px solid var(--a7r-glass-border) !important;
+    color: var(--a7r-fg) !important;
+    border-radius: 8px !important;
+}
+button:hover, .button:hover, .btn:not(.cell.add .btn):hover {
+    background-color: var(--a7r-surface) !important;
+    border-color: var(--a7r-accent) !important;
+}
+
+a, .link, [data-testid="link"], .objectLink, .mention {
+    color: var(--a7r-accent) !important;
+}
+a:hover, .link:hover {
+    color: var(--a7r-highlight) !important;
+}
+
+.selected, [data-active="true"], .isActive, .active {
+    background-color: var(--a7r-surface) !important;
+    color: var(--a7r-accent) !important;
+}
+
+.sidebar .sidebarPage.pageWidget>.head:after, .sidebar .sidebarPage.pageWidgetManage>.head:after, .widget.widgetSpace:after {
+  background: linear-gradient(90deg, rgba(var(--a7r-accent-rgb), 0) 0%, rgba(var(--a7r-accent-rgb), 0.15) 50%, rgba(var(--a7r-accent-rgb), 0) 100%) !important;
+}
+
+::selection {
+    background-color: rgba(var(--a7r-emphasis-rgb), 0.3) !important;
+}
+*:focus, .focused {
+    border-color: var(--a7r-accent) !important;
+    outline: none !important;
+}
+
+[style*="background"]:not(.sidebar):not(.menu):not(.card):not(.popup) {
+    background-color: transparent !important;
+}
+
+.headSimple .sides {
+  flex-direction: column !important;
+  align-items: center !important;
+  gap: 17px 32px !important;
+}
+.listInline {
+  margin-left: none !important;
+  justify-content: center !important;
+  text-align: center !important;
+}
+.widget.widgetSpace .spaceData .head, .widget.widgetSpace .spaceStream .head {
+  padding: 7px !important;
+}
+.widget .head {
+  padding: 7px 7px 0 7px !important;
+}
+
+html.themeDark .socialBlock {
+  background: linear-gradient(to bottom, #192B3A00, #192B3A0a, #192B3A2e, #192B3A80, #192B3Ad1, #192B3Af5);
+}
+
+.sidebar .sidebarPage.pageVault>.bottom .grad {
+  background: transparent !important;
+}
+.widget.widgetSpace .iconHead {
+  align-items: center !important;
+  justify-content: center !important;
+}
