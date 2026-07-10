@@ -1,0 +1,673 @@
+/* KittyDark GTK3 theme - colors from ~/.config/kitty/kitty.conf */
+
+@define-color theme_bg_color #192B3A;
+@define-color theme_fg_color #8fb8d5;
+@define-color theme_base_color #162735;
+@define-color theme_text_color #8fb8d5;
+@define-color theme_selected_bg_color #4C7B9D;
+@define-color theme_selected_fg_color #8fb8d5;
+@define-color theme_unfocused_bg_color #162735;
+@define-color theme_unfocused_fg_color #8fb8d5;
+@define-color theme_unfocused_base_color #162735;
+@define-color theme_unfocused_text_color #8fb8d5;
+@define-color theme_unfocused_selected_bg_color #3E6383;
+@define-color theme_unfocused_selected_fg_color #8fb8d5;
+
+@define-color insensitive_bg_color #1e2b36;
+@define-color insensitive_fg_color #3E6383;
+@define-color insensitive_base_color #162735;
+
+@define-color theme_tooltip_bg_color #1e3347;
+@define-color theme_tooltip_fg_color #8fb8d5;
+
+@define-color borders #3E6383;
+@define-color unfocused_borders #2a3d4d;
+
+@define-color warning_color #e66100;
+@define-color error_color #c01c28;
+@define-color success_color #26a269;
+
+@define-color link_color #669BC1;
+@define-color link_visited_color #6DA6CE;
+
+@define-color content_view_bg #162735;
+
+@define-color wm_title @theme_fg_color;
+@define-color wm_unfocused_title alpha(@theme_fg_color, 0.6);
+@define-color wm_highlight transparent;
+@define-color wm_titlebar_bg #1c3042;
+@define-color wm_unfocused_titlebar_bg #162735;
+@define-color wm_border @borders;
+@define-color wm_buttons_bg alpha(black, 0.2);
+@define-color wm_button_close_bg #c01c28;
+@define-color wm_button_close_hover_bg #e01b24;
+@define-color wm_button_close_active_bg #a51d2d;
+@define-color wm_icon_close_bg #ffffff;
+@define-color wm_icon_close_hover_bg #ffffff;
+
+* {
+  -GtkWidget-outline-color: alpha(@theme_selected_bg_color, 0.5);
+  -GtkWidget-outline-width: 1px;
+  -GtkWidget-focus-padding: 1px;
+  -GtkWidget-focus-line-width: 0;
+  engine: none;
+}
+
+.background {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+*:selected,
+*:selected:focus {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+GtkWindow {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+}
+
+GtkHeaderBar,
+headerbar {
+  background-color: @wm_titlebar_bg;
+  color: @theme_fg_color;
+  border-bottom: 1px solid @borders;
+  border-radius: 12px 12px 0 0;
+  padding: 6px 12px;
+  min-height: 42px;
+}
+
+GtkHeaderBar:backdrop,
+headerbar:backdrop {
+  background-color: @wm_unfocused_titlebar_bg;
+}
+
+GtkHeaderBar > GtkBox,
+headerbar > box {
+  border-spacing: 6px;
+}
+
+GtkTreeView,
+GtkIconView,
+GtkTextView,
+GtkViewport,
+.view {
+  background-color: @theme_base_color;
+  color: @theme_text_color;
+}
+
+GtkTreeView:selected,
+GtkIconView:selected,
+GtkTextView:selected,
+.view:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+  border-radius: 10px;
+}
+
+GtkTreeView row {
+  padding: 8px 12px;
+  min-height: 28px;
+}
+
+GtkIconView {
+  padding: 8px;
+}
+
+GtkButton,
+button {
+  background-color: alpha(currentColor, 0.06);
+  color: @theme_fg_color;
+  border: 1px solid @borders;
+  border-radius: 10px;
+  padding: 6px 14px;
+  min-height: 18px;
+}
+
+GtkButton:hover,
+button:hover {
+  background-color: alpha(currentColor, 0.1);
+}
+
+GtkButton:active,
+button:active {
+  background-color: alpha(#507FA3, 0.3);
+}
+
+GtkButton:checked,
+button:checked {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+GtkButton:insensitive,
+button:insensitive {
+  background-color: @insensitive_bg_color;
+  color: @insensitive_fg_color;
+}
+
+GtkEntry,
+entry {
+  background-color: @theme_base_color;
+  color: @theme_text_color;
+  border: 1px solid @borders;
+  border-radius: 10px;
+  padding: 6px 10px;
+  caret-color: #669BC1;
+  min-height: 18px;
+}
+
+GtkEntry:focus,
+entry:focus {
+  border-color: #669BC1;
+  box-shadow: 0 0 0 1px #669BC1;
+}
+
+GtkEntry selection,
+entry selection {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+GtkScale,
+scale {
+  -GtkScale-slider-length: 18;
+  -GtkScale-trough-border: 0;
+}
+
+GtkScale trough,
+scale trough {
+  background-color: alpha(#3E6383, 0.3);
+  border-radius: 9999px;
+  min-height: 8px;
+}
+
+GtkScale slider,
+scale slider {
+  background-color: @theme_selected_bg_color;
+  border-radius: 50%;
+  min-width: 18px;
+  min-height: 18px;
+}
+
+GtkProgressBar,
+progressbar {
+  background-color: alpha(#3E6383, 0.3);
+  border-radius: 9999px;
+}
+
+GtkProgressBar.progress,
+progressbar progress {
+  background-color: @theme_selected_bg_color;
+  border-radius: 9999px;
+  min-height: 8px;
+}
+
+GtkSwitch,
+switch {
+  background-color: alpha(#3E6383, 0.4);
+  border-radius: 9999px;
+  min-width: 44px;
+  min-height: 24px;
+}
+
+GtkSwitch:checked,
+switch:checked {
+  background-color: @theme_selected_bg_color;
+}
+
+GtkSwitch slider,
+switch slider {
+  background-color: @theme_fg_color;
+  border-radius: 50%;
+  min-width: 20px;
+  min-height: 20px;
+  margin: 2px;
+}
+
+GtkCheckButton,
+checkbutton {
+  color: @theme_fg_color;
+}
+
+GtkCheckButton > GtkLabel,
+checkbutton > label {
+  margin: 0 0 0 6px;
+}
+
+GtkCheckButton.check,
+check {
+  border: 1px solid @borders;
+  background-color: transparent;
+  border-radius: 4px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+GtkCheckButton.check:checked,
+check:checked {
+  background-color: @theme_selected_bg_color;
+  border-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+GtkNotebook,
+notebook {
+  background-color: @theme_bg_color;
+}
+
+GtkNotebook tab,
+notebook tab {
+  background-color: transparent;
+  border: none;
+  padding: 6px 16px;
+  margin: 2px;
+  border-radius: 10px;
+}
+
+GtkNotebook tab:checked,
+notebook tab:checked {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+GtkNotebook tab:hover,
+notebook tab:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+GtkMenu,
+menu {
+  background-color: #1e3347;
+  color: @theme_fg_color;
+  border: 1px solid @borders;
+  border-radius: 14px;
+  padding: 6px;
+}
+
+GtkMenuItem,
+menuitem {
+  padding: 6px 14px;
+  border-radius: 10px;
+}
+
+GtkMenuItem:hover,
+menuitem:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+GtkTooltip,
+tooltip {
+  background-color: @theme_tooltip_bg_color;
+  color: @theme_tooltip_fg_color;
+  border: 1px solid @borders;
+  border-radius: 10px;
+  padding: 6px 12px;
+}
+
+GtkScrolledWindow,
+scrolledwindow {
+  background-color: @theme_base_color;
+}
+
+GtkScrolledWindow.frame,
+scrolledwindow.frame {
+  border: 1px solid @borders;
+  border-radius: 10px;
+}
+
+GtkScrollbar,
+scrollbar {
+  -GtkScrollbar-has-backward-stepper: 0;
+  -GtkScrollbar-has-forward-stepper: 0;
+  background-color: alpha(#3E6383, 0.3);
+}
+
+GtkScrollbar.slider,
+scrollbar slider {
+  background-color: #507FA3;
+  border-radius: 9999px;
+  min-width: 8px;
+  min-height: 8px;
+  margin: 3px;
+}
+
+GtkScrollbar.slider:hover,
+scrollbar slider:hover {
+  background-color: #6399C0;
+}
+
+GtkPaned,
+paned {
+  -GtkPaned-handle-size: 1;
+}
+
+GtkPaned separator,
+paned separator {
+  background-color: @borders;
+}
+
+GtkInfoBar,
+infobar {
+  border-radius: 10px;
+  margin: 4px 0;
+  padding: 8px 12px;
+}
+
+GtkInfoBar.info,
+infobar.info {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+GtkInfoBar.warning,
+infobar.warning {
+  background-color: #e66100;
+  color: #ffffff;
+}
+
+GtkInfoBar.error,
+infobar.error {
+  background-color: #c01c28;
+  color: #ffffff;
+}
+
+GtkInfoBar.question,
+infobar.question {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+GtkListBoxRow,
+list row {
+  background-color: transparent;
+  border-radius: 10px;
+  min-height: 28px;
+  padding: 6px 8px;
+  margin: 2px 0;
+}
+
+GtkListBoxRow:selected,
+list row:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+GtkListBoxRow image,
+list row image {
+  margin: 0 6px;
+}
+
+GtkTreeView row {
+  min-height: 26px;
+  padding: 6px 8px;
+}
+
+GtkComboBox,
+combobox {
+  color: @theme_fg_color;
+}
+
+GtkComboBox button,
+combobox button {
+  background-color: alpha(currentColor, 0.06);
+  color: @theme_fg_color;
+  border-radius: 10px;
+}
+
+GtkCalendar,
+calendar {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+  border-radius: 10px;
+  padding: 6px;
+}
+
+GtkCalendar:selected,
+calendar:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+GtkSeparator,
+separator {
+  background-color: alpha(currentColor, 0.1);
+  min-height: 1px;
+  margin: 4px 0;
+}
+
+GtkLabel,
+label {
+  color: @theme_fg_color;
+}
+
+GtkLabel:disabled,
+label:disabled {
+  color: @insensitive_fg_color;
+}
+
+GtkSidebarRow,
+.sidebar-row {
+  background-color: transparent;
+  border-radius: 10px;
+}
+
+GtkSidebarRow:selected,
+.sidebar-row:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.frame {
+  border: 1px solid @borders;
+  border-radius: 10px;
+}
+
+GtkToolbar,
+toolbar {
+  background-color: @theme_bg_color;
+  color: @theme_fg_color;
+  border: none;
+  padding: 4px 8px;
+  border-spacing: 8px;
+}
+
+GtkToolbar button,
+toolbar button {
+  padding: 4px 10px;
+  margin: 0 2px;
+}
+
+GtkToolbar separator,
+toolbar separator {
+  margin: 0 4px;
+}
+
+GtkToolbar GtkSeparator,
+toolbar separator {
+  margin: 0 4px;
+}
+
+GtkLinkButton,
+button.link {
+  color: @link_color;
+}
+
+GtkLinkButton:visited,
+button.link:visited {
+  color: @link_visited_color;
+}
+
+GtkTreeView.view,
+treeview.view {
+  border-radius: 0;
+}
+
+GtkTreeView.view:selected,
+treeview.view:selected {
+  border-radius: 10px;
+}
+
+GtkSpinner,
+spinner {
+  color: @theme_selected_bg_color;
+}
+
+GtkLevelBar,
+levelbar {
+  -GtkLevelBar-min-block-width: 24;
+  -GtkLevelBar-min-block-height: 8;
+}
+
+GtkLevelBar trough,
+levelbar trough {
+  background-color: alpha(#3E6383, 0.3);
+  border-radius: 9999px;
+}
+
+GtkLevelBar block,
+levelbar block {
+  background-color: @theme_selected_bg_color;
+  border-radius: 9999px;
+}
+
+GtkLevelBar block.warning,
+levelbar block.warning {
+  background-color: @warning_color;
+}
+
+GtkLevelBar block.error,
+levelbar block.error {
+  background-color: @error_color;
+}
+
+GtkFrame,
+frame {
+  border-radius: 10px;
+}
+
+GtkDialog,
+dialog {
+  border-radius: 12px;
+}
+
+GtkDialog .dialog-action-area button,
+messagedialog .dialog-action-area button {
+  border-radius: 0;
+  padding: 8px 16px;
+  min-height: 32px;
+}
+
+GtkDialog .dialog-action-area button:first-child,
+messagedialog .dialog-action-area button:first-child {
+  border-radius: 0 0 0 12px;
+}
+
+GtkDialog .dialog-action-area button:last-child,
+messagedialog .dialog-action-area button:last-child {
+  border-radius: 0 0 12px 0;
+}
+
+GtkPopover,
+popover {
+  border-radius: 14px;
+  padding: 6px;
+}
+
+GtkPopover.background,
+popover.background {
+  background-color: #1e3347;
+}
+
+rubberband,
+.rubberband {
+  background-color: alpha(#4C7B9D, 0.25);
+  border: 1px solid #669BC1;
+  border-radius: 4px;
+}
+
+GtkFlowBoxChild,
+flowboxchild {
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin: 4px;
+}
+
+GtkFlowBoxChild:selected,
+flowboxchild:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+GtkStatusbar,
+statusbar {
+  padding: 4px 8px;
+  min-height: 24px;
+}
+
+GtkActionBar,
+actionbar {
+  padding: 6px 8px;
+  background-color: @wm_titlebar_bg;
+  color: @theme_fg_color;
+  border-top: 1px solid @borders;
+}
+
+GtkSearchBar,
+searchbar {
+  padding: 6px 8px;
+  background-color: @wm_titlebar_bg;
+  border-bottom: 1px solid @borders;
+}
+
+/* Sidebar specific for Thunar/GtkTreeView sidebar */
+GtkTreeView.sidebar {
+  background-color: @wm_titlebar_bg;
+  color: @theme_fg_color;
+}
+
+GtkTreeView.sidebar:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+/* Thunar specific */
+GtkWindow.thunar GtkScrolledWindow {
+  padding: 6px;
+}
+
+GtkWindow.thunar .view {
+  padding: 4px;
+}
+
+GtkWindow.thunar GtkTreeView row {
+  padding: 8px 12px;
+  margin: 0 4px;
+}
+
+GtkWindow.thunar GtkFlowBox {
+  padding: 12px;
+}
+
+GtkWindow.thunar GtkFlowBoxChild {
+  padding: 12px 16px;
+  margin: 4px;
+}
+
+GtkWindow.thunar GtkFlowBoxChild *,
+GtkWindow.thunar GtkTreeView *,
+GtkWindow.thunar GtkIconView *,
+GtkWindow.thunar * {
+  /* Force no text wrapping anywhere in Thunar */
+  white-space: nowrap;
+}
+
+GtkWindow.thunar GtkFlowBoxChild label,
+GtkWindow.thunar GtkTreeView label,
+GtkWindow.thunar GtkIconView label,
+GtkWindow.thunar label {
+  white-space: nowrap;
+  -gtk-label-wrap: none;
+}

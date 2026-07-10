@@ -1,0 +1,844 @@
+/* KittyDark GTK4 theme - colors from ~/.config/kitty/kitty.conf */
+
+@define-color accent_color #669BC1;
+@define-color accent_fg_color #8fb8d5;
+@define-color accent_bg_color #4C7B9D;
+@define-color destructive_bg_color #c01c28;
+@define-color destructive_fg_color #ffffff;
+@define-color destructive_color #e01b24;
+@define-color success_bg_color #26a269;
+@define-color success_fg_color #ffffff;
+@define-color success_color #33d17a;
+@define-color warning_bg_color #e66100;
+@define-color warning_fg_color #ffffff;
+@define-color warning_color #ff7800;
+@define-color error_bg_color #c01c28;
+@define-color error_fg_color #ffffff;
+@define-color error_color #e01b24;
+
+@define-color window_bg_color #192B3A;
+@define-color window_fg_color #8fb8d5;
+@define-color view_bg_color #162735;
+@define-color view_fg_color #8fb8d5;
+@define-color headerbar_bg_color #1c3042;
+@define-color headerbar_fg_color #8fb8d5;
+@define-color headerbar_border_color rgba(143, 184, 213, 0.12);
+@define-color headerbar_backdrop_color #162735;
+@define-color headerbar_shade_color mix(black, #1c3042, 0.25);
+@define-color headerbar_darker_shade_color mix(black, #1c3042, 0.25);
+@define-color sidebar_bg_color #1c3042;
+@define-color sidebar_fg_color #8fb8d5;
+@define-color sidebar_backdrop_color #1c3042;
+@define-color sidebar_shade_color rgba(0, 0, 0, 0.25);
+@define-color sidebar_border_color rgba(143, 184, 213, 0.12);
+@define-color secondary_sidebar_bg_color #162735;
+@define-color secondary_sidebar_fg_color #8fb8d5;
+@define-color card_bg_color #1e3347;
+@define-color card_fg_color #8fb8d5;
+@define-color popover_bg_color #1e3347;
+@define-color popover_fg_color #8fb8d5;
+@define-color dialog_bg_color #162735;
+@define-color dialog_fg_color #8fb8d5;
+@define-color thumbnail_bg_color #1e3347;
+@define-color thumbnail_fg_color #8fb8d5;
+@define-color view_hover_color rgba(102, 155, 193, 0.08);
+@define-color view_active_color rgba(102, 155, 193, 0.16);
+@define-color borders #3E6383;
+@define-color scrollbar_bg_color alpha(#3E6383, 0.3);
+@define-color scrollbar_slider_color #507FA3;
+@define-color scrollbar_slider_hover_color #6399C0;
+@define-color scrollbar_slider_active_color #669BC1;
+
+@define-color theme_bg_color #192B3A;
+@define-color theme_fg_color #8fb8d5;
+@define-color theme_base_color #162735;
+@define-color theme_text_color #8fb8d5;
+@define-color theme_selected_bg_color #4C7B9D;
+@define-color theme_selected_fg_color #8fb8d5;
+@define-color theme_unfocused_bg_color #162735;
+@define-color theme_unfocused_fg_color #8fb8d5;
+@define-color theme_unfocused_base_color #162735;
+@define-color theme_unfocused_text_color #8fb8d5;
+@define-color theme_unfocused_selected_bg_color #3E6383;
+@define-color theme_unfocused_selected_fg_color #8fb8d5;
+@define-color theme_titlebar_bg_color #1c3042;
+@define-color theme_titlebar_fg_color #8fb8d5;
+@define-color theme_titlebar_backdrop_color #162735;
+@define-color theme_titlebar_text_color #8fb8d5;
+@define-color insensitive_bg_color #1e2b36;
+@define-color insensitive_fg_color #3E6383;
+@define-color insensitive_base_color #162735;
+@define-color insensitive_borders_color #2a3d4d;
+@define-color link_color #669BC1;
+@define-color link_visited_color #6DA6CE;
+
+@define-color tooltip_bg_color #1e3347;
+@define-color tooltip_fg_color #8fb8d5;
+@define-color tooltip_border_color #3E6383;
+
+@define-color window_radius 12px;
+@define-color widget_radius 10px;
+@define-color entry_radius 10px;
+@define-color popover_radius 14px;
+@define-color sidebar_radius 10px;
+
+window {
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+}
+
+window.background > box,
+window.background > grid,
+window.background > paned {
+  background-color: @window_bg_color;
+}
+
+.background {
+  color: @window_fg_color;
+  background-color: @window_bg_color;
+}
+
+window.background.csd {
+  border-radius: @window_radius;
+}
+
+headerbar {
+  background-color: @headerbar_bg_color;
+  color: @headerbar_fg_color;
+  border-bottom: 1px solid @headerbar_border_color;
+  border-radius: @window_radius @window_radius 0 0;
+  padding: 6px 12px;
+  min-height: 42px;
+}
+
+headerbar:backdrop {
+  background-color: @headerbar_backdrop_color;
+}
+
+headerbar > box {
+  border-spacing: 6px;
+}
+
+headerbar button {
+  padding: 4px 12px;
+}
+
+headerbar entry {
+  min-height: 22px;
+}
+
+.sidebar {
+  background-color: @sidebar_bg_color;
+  color: @sidebar_fg_color;
+  padding: 4px;
+}
+
+.sidebar:backdrop {
+  background-color: @sidebar_backdrop_color;
+}
+
+treeview.view,
+iconview.view,
+.view {
+  color: @view_fg_color;
+  background-color: @view_bg_color;
+}
+
+.view:selected,
+treeview.view:selected,
+iconview.view:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+  border-radius: @widget_radius;
+}
+
+.view:selected:focus {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+}
+
+.view:hover {
+  background-color: alpha(currentColor, 0.05);
+}
+
+textview text {
+  background-color: @view_bg_color;
+  color: @view_fg_color;
+}
+
+textview {
+  padding: 4px;
+}
+
+button {
+  background-color: alpha(currentColor, 0.06);
+  color: @window_fg_color;
+  border: 1px solid alpha(currentColor, 0.15);
+  border-radius: @widget_radius;
+  padding: 6px 14px;
+  transition: all 100ms ease-in-out;
+  min-height: 18px;
+}
+
+button:hover {
+  background-color: alpha(currentColor, 0.1);
+  border-color: alpha(currentColor, 0.25);
+}
+
+button:active {
+  background-color: alpha(#507FA3, 0.3);
+}
+
+button:checked {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+  border-color: @accent_bg_color;
+}
+
+button.suggested-action {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+  border-color: @accent_bg_color;
+}
+
+button.suggested-action:hover {
+  background-color: #507FA3;
+}
+
+button.destructive-action {
+  background-color: @destructive_bg_color;
+  color: @destructive_fg_color;
+}
+
+button.flat {
+  background-color: transparent;
+  border-color: transparent;
+}
+
+button.flat:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+button.circular {
+  border-radius: 9999px;
+}
+
+button.pill {
+  border-radius: 9999px;
+  padding-left: 18px;
+  padding-right: 18px;
+}
+
+entry {
+  background-color: alpha(currentColor, 0.05);
+  color: @window_fg_color;
+  border: 1px solid @borders;
+  border-radius: @entry_radius;
+  padding: 6px 10px;
+  caret-color: #669BC1;
+  min-height: 18px;
+}
+
+entry:focus {
+  border-color: @accent_color;
+  box-shadow: 0 0 0 1px @accent_color;
+}
+
+entry selection {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+entry.search {
+  border-radius: 9999px;
+}
+
+combobox button {
+  background-color: alpha(currentColor, 0.06);
+  border-radius: @widget_radius;
+}
+
+combobox entry {
+  min-height: 18px;
+}
+
+spinbutton {
+  background-color: alpha(currentColor, 0.05);
+  border: 1px solid @borders;
+  border-radius: @widget_radius;
+}
+
+scrollbar {
+  background-color: @scrollbar_bg_color;
+}
+
+scrollbar slider {
+  background-color: @scrollbar_slider_color;
+  border-radius: 9999px;
+  min-width: 8px;
+  min-height: 8px;
+  margin: 3px;
+}
+
+scrollbar slider:hover {
+  background-color: @scrollbar_slider_hover_color;
+}
+
+scrollbar slider:active {
+  background-color: @scrollbar_slider_active_color;
+}
+
+scrollbar trough {
+  background-color: transparent;
+}
+
+progressbar {
+  background-color: alpha(currentColor, 0.1);
+  border-radius: 9999px;
+}
+
+progressbar trough {
+  background-color: alpha(#3E6383, 0.3);
+  border-radius: 9999px;
+  min-height: 8px;
+}
+
+progressbar progress {
+  background-color: @accent_bg_color;
+  border-radius: 9999px;
+}
+
+levelbar block {
+  background-color: @accent_bg_color;
+  border-radius: 9999px;
+  min-height: 8px;
+  margin: 1px;
+}
+
+levelbar block:disabled {
+  background-color: @borders;
+}
+
+levelbar block.warning {
+  background-color: @warning_bg_color;
+}
+
+levelbar block.error {
+  background-color: @error_bg_color;
+}
+
+scale trough {
+  background-color: alpha(#3E6383, 0.3);
+  border-radius: 9999px;
+  min-height: 8px;
+}
+
+scale highlight {
+  background-color: @accent_bg_color;
+  border-radius: 9999px;
+}
+
+scale slider {
+  background-color: @accent_bg_color;
+  border-radius: 50%;
+  min-width: 18px;
+  min-height: 18px;
+  margin: -6px;
+}
+
+switch {
+  background-color: alpha(#3E6383, 0.4);
+  border-radius: 9999px;
+  padding: 0;
+  min-width: 44px;
+  min-height: 24px;
+}
+
+switch:checked {
+  background-color: @accent_bg_color;
+}
+
+switch slider {
+  background-color: #8fb8d5;
+  border-radius: 50%;
+  min-width: 20px;
+  min-height: 20px;
+  margin: 2px;
+}
+
+checkbutton,
+radiobutton {
+  color: @window_fg_color;
+  border-spacing: 8px;
+}
+
+checkbutton label,
+radiobutton label {
+  margin: 0 0 0 4px;
+}
+
+check,
+radio {
+  border: 1px solid @borders;
+  background-color: transparent;
+  border-radius: 4px;
+  min-width: 16px;
+  min-height: 16px;
+}
+
+radio {
+  border-radius: 50%;
+}
+
+check:checked,
+radio:checked {
+  background-color: @accent_bg_color;
+  border-color: @accent_bg_color;
+  color: @accent_fg_color;
+}
+
+check:disabled,
+radio:disabled {
+  opacity: 0.5;
+}
+
+notebook {
+  background-color: @window_bg_color;
+}
+
+notebook > header {
+  background-color: transparent;
+  border: none;
+  padding: 4px;
+}
+
+notebook tab {
+  background-color: transparent;
+  border: none;
+  padding: 6px 16px;
+  margin: 2px;
+  border-radius: @widget_radius;
+}
+
+notebook tab:checked {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+}
+
+notebook tab:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+paned > separator {
+  background-color: @borders;
+  min-width: 1px;
+}
+
+menu,
+.menu {
+  background-color: @popover_bg_color;
+  color: @popover_fg_color;
+  border: 1px solid @borders;
+  border-radius: @popover_radius;
+  padding: 6px;
+}
+
+menuitem {
+  padding: 6px 14px;
+  border-radius: @widget_radius;
+}
+
+menuitem:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+popover > contents {
+  background-color: @popover_bg_color;
+  color: @popover_fg_color;
+  border-radius: @popover_radius;
+  padding: 6px;
+}
+
+popover > arrow {
+  background-color: @popover_bg_color;
+}
+
+tooltip {
+  background-color: @tooltip_bg_color;
+  color: @tooltip_fg_color;
+  border: 1px solid @tooltip_border_color;
+  border-radius: @widget_radius;
+  padding: 6px 12px;
+}
+
+tooltip.background {
+  background-color: @tooltip_bg_color;
+}
+
+list {
+  background-color: @view_bg_color;
+  color: @view_fg_color;
+  padding: 4px;
+}
+
+list > row {
+  margin: 2px 0;
+  padding: 6px 8px;
+}
+
+listview row {
+  border-radius: @widget_radius;
+  padding: 6px 8px;
+}
+
+row {
+  background-color: transparent;
+  border-radius: @widget_radius;
+  min-height: 28px;
+}
+
+row:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+row:hover {
+  background-color: alpha(currentColor, 0.05);
+}
+
+row image {
+  margin: 0 6px;
+}
+
+.infobar {
+  border-radius: @widget_radius;
+  margin: 4px 0;
+  padding: 8px 12px;
+}
+
+infobar.info {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+}
+
+infobar.warning {
+  background-color: @warning_bg_color;
+  color: @warning_fg_color;
+}
+
+infobar.error {
+  background-color: @error_bg_color;
+  color: @error_fg_color;
+}
+
+infobar.question {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+}
+
+columnview.view,
+treeview.view {
+  color: @view_fg_color;
+  background-color: @view_bg_color;
+}
+
+columnview.view > columnviewrow,
+treeview.view > treeviewrow {
+  padding: 6px 8px;
+  min-height: 26px;
+}
+
+columnview.view:selected,
+treeview.view:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+  border-radius: @widget_radius;
+}
+
+columnview.view > columnviewrow:hover,
+treeview.view > treeviewrow:hover {
+  background-color: alpha(currentColor, 0.05);
+}
+
+calendar {
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+  border-radius: @widget_radius;
+  padding: 6px;
+}
+
+calendar:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.dim-label {
+  opacity: 0.6;
+}
+
+.selection-mode headerbar {
+  background-color: @accent_bg_color;
+  color: @accent_fg_color;
+  border-radius: @window_radius @window_radius 0 0;
+}
+
+.selection-mode headerbar button {
+  background-color: alpha(white, 0.1);
+  color: @accent_fg_color;
+}
+
+flowbox {
+  padding: 6px;
+}
+
+flowbox > flowboxchild {
+  border-radius: @widget_radius;
+  padding: 10px;
+  margin: 2px;
+}
+
+flowbox > flowboxchild:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+placessidebar {
+  background-color: @sidebar_bg_color;
+  color: @sidebar_fg_color;
+  padding: 6px;
+}
+
+placessidebar row {
+  border-radius: @sidebar_radius;
+  margin: 2px 8px;
+  padding: 6px 12px;
+  min-height: 28px;
+}
+
+placessidebar row:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+placessidebar row:hover {
+  background-color: alpha(currentColor, 0.08);
+}
+
+.navigation-sidebar {
+  padding: 6px;
+}
+
+.navigation-sidebar row {
+  border-radius: @sidebar_radius;
+  margin: 2px 8px;
+  padding: 6px 12px;
+  min-height: 28px;
+}
+
+.navigation-sidebar row:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+.card {
+  background-color: @card_bg_color;
+  color: @card_fg_color;
+  border-radius: @popover_radius;
+  padding: 12px;
+}
+
+.card button {
+  border-radius: @widget_radius;
+}
+
+dialog {
+  background-color: @dialog_bg_color;
+  color: @dialog_fg_color;
+  border-radius: @window_radius;
+  padding: 8px;
+}
+
+messagedialog {
+  border-radius: @window_radius;
+}
+
+messagedialog .dialog-action-area button {
+  border-radius: 0;
+  border-left: 1px solid @borders;
+  padding: 8px 16px;
+  min-height: 32px;
+}
+
+messagedialog .dialog-action-area button:first-child {
+  border-radius: 0 0 0 @window_radius;
+}
+
+messagedialog .dialog-action-area button:last-child {
+  border-radius: 0 0 @window_radius 0;
+}
+
+frame {
+  border-radius: @widget_radius;
+}
+
+frame > border {
+  border: 1px solid @borders;
+  border-radius: @widget_radius;
+}
+
+window.background {
+  border-radius: @window_radius;
+}
+
+window.background.unified headerbar:not(.selection-mode) {
+  border-radius: @window_radius @window_radius 0 0;
+}
+
+rubberband {
+  background-color: alpha(#4C7B9D, 0.25);
+  border: 1px solid #669BC1;
+  border-radius: 4px;
+}
+
+rubberband,
+.rubberband {
+  background-color: alpha(#4C7B9D, 0.25);
+  border: 1px solid #669BC1;
+  border-radius: 4px;
+}
+
+undershoot,
+overshoot {
+  border-radius: 0;
+}
+
+separator {
+  background-color: alpha(currentColor, 0.1);
+  min-height: 1px;
+  margin: 4px 0;
+}
+
+statuspage {
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+}
+
+headerbar image,
+toolbar image {
+  -gtk-icon-filter: none;
+}
+
+window.background.csd decoration {
+  border-radius: @window_radius;
+}
+
+/* Statusbar */
+statusbar {
+  padding: 4px 8px;
+  min-height: 24px;
+}
+
+/* ScrolledWindow */
+scrolledwindow {
+  padding: 0;
+}
+
+scrolledwindow.frame {
+  border: 1px solid @borders;
+}
+
+/* Toolbar */
+toolbar {
+  padding: 4px 8px;
+  border-spacing: 8px;
+  background-color: @window_bg_color;
+  color: @window_fg_color;
+}
+
+toolbar button {
+  padding: 4px 10px;
+  margin: 0 2px;
+}
+
+toolbar separator {
+  margin: 0 4px;
+}
+
+/* ActionBar */
+actionbar {
+  padding: 6px 8px;
+  background-color: @headerbar_bg_color;
+  color: @headerbar_fg_color;
+  border-top: 1px solid @headerbar_border_color;
+}
+
+/* SearchBar */
+searchbar {
+  padding: 6px 8px;
+  background-color: @headerbar_bg_color;
+  border-bottom: 1px solid @headerbar_border_color;
+}
+
+/* PathBar - important for Thunar */
+.pathbar {
+  padding: 6px 10px;
+  border-spacing: 4px;
+}
+
+.pathbar button {
+  padding: 4px 12px;
+  border-radius: @widget_radius;
+}
+
+/* Thunar specific overrides */
+window.thunar {
+  background-color: @window_bg_color;
+}
+
+window.thunar .sidebar {
+  padding: 6px;
+  background-color: @sidebar_bg_color;
+}
+
+window.thunar .sidebar .view {
+  background-color: @sidebar_bg_color;
+  color: @sidebar_fg_color;
+}
+
+window.thunar .sidebar .view:selected {
+  background-color: @theme_selected_bg_color;
+  color: @theme_selected_fg_color;
+}
+
+window.thunar scrolledwindow {
+  padding: 6px;
+}
+
+window.thunar .view {
+  padding: 4px;
+}
+
+window.thunar columnview.view columnviewrow,
+window.thunar treeview.view treeviewrow {
+  padding: 8px 12px;
+  margin: 0 4px;
+}
+
+window.thunar flowbox {
+  padding: 12px;
+}
+
+window.thunar flowbox > flowboxchild {
+  padding: 12px 16px;
+  margin: 4px;
+}
+
+window.thunar flowbox > flowboxchild label,
+window.thunar treeview.view label,
+window.thunar columnview.view label,
+window.thunar label {
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-width: 9999px;
+}

@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=X-GNOME-Metatheme
+Name=KittyDark
+Comment=GTK theme matching kitty terminal colors
+Encoding=UTF-8
+
+[X-GNOME-Metatheme]
+GtkTheme=KittyDark
+MetacityTheme=KittyDark
+IconTheme=Cawnonical Mono-Glyph Icon Suite (Accented)
+CursorTheme=A7R-Cursor
+ButtonLayout=close,minimize,maximize:menu
