@@ -1,0 +1,233 @@
+{
+	"setSpellingLang": true,
+	"networkConfig": {
+		"mode": 0,
+		"path": ""
+	},
+	"account": {
+		"AASW11NejPyVTRHsiYBqLwneCPcs9HcNrRz28FQm9SJ3CiUQ": {
+			"spaceId": "bafyreigad5gxs3ctmxqq6hgaizwp7c6b75gy7ldiqfgw27km4a3mf4meeq.n22hxc4yu4fw"
+		},
+		"A8BvTrTyWjde5GopfLdM1Zwq6n953baMHErA43ArMpYEhZiT": {
+			"spaceId": "bafyreifdo6mydq2wnybcggd4lc7xt4r7zp752uh7wwvjs5gwo6meh43izu.2la8hsn8huo8y"
+		},
+		"A9oCWfyuposcQmhGoqJrmAePirn96SnvPMQn8nGbDabGLhoT": {
+			"spaceId": "bafyreicpuy4felkn66e2ugmixhdkqlrg5lgqkw777czf4ibopd5j67o3ee.xclk38le1liu"
+		},
+		"A9CwH62byaymc5VSgg1MjAnhtgg3i4ZJFqiF2r56NCNac8NR": {
+			"spaceId": "bafyreigzsb3c6vlcrhpbhvx7ijgjw5ydn4rchk5cvpnmewonwxhg6bdz5m.36o49jahby8pm"
+		},
+		"AB8wez2TGZBfwgXsWuRrv73U47NqXKYjpi2fa5utE8P3AndC": {
+			"spaceId": "bafyreieouth7i5ohjymoysdot5i4uppzcafinon73ntsl7nwv7uof45maq.q5coc8rssstc"
+		},
+		"A8efF6fPUrBY8QYntWxDFTYKf4jhhYG12NUvERHrhHHtBqLC": {
+			"spaceId": "bafyreidqkyb364qr5ndsrfjdihw7w44f4cmilzm2lzsrabxyrfzl26mgy4.3mpj02tv9zsxm"
+		},
+		"A9ZRRckqJ7r1kcrHbPSzDRE82HRhtjtn9cc6TWZrwhh7yDKV": {
+			"spaceId": "bafyreicbk74rn7m6iryzhiee62ywcngnbh5iosw5co7qxmiocnxmil3daa.21tntd16p26e2"
+		},
+		"A67ZDEJM9rxQTAs3jQDeTmyUWDHs8TdJNAbhGeTs2SAdu3yJ": {
+			"spaceId": "bafyreicbk74rn7m6iryzhiee62ywcngnbh5iosw5co7qxmiocnxmil3daa.21tntd16p26e2"
+		}
+	},
+	"showRelativeDates": true,
+	"multichatsOnboarding": true,
+	"onboarding": [
+		"objectDescriptionButton",
+		"typeResetLayout",
+		"common",
+		"membership",
+		"templateSelect",
+		"inlineSet",
+		"mainGraph",
+		"inlineCollection",
+		"syncStatus",
+		"collections",
+		"setSettings",
+		"chat"
+	],
+	"space": {
+		"bafyreigad5gxs3ctmxqq6hgaizwp7c6b75gy7ldiqfgw27km4a3mf4meeq.n22hxc4yu4fw": {
+			"widgetSections": [
+				{
+					"id": 0,
+					"isClosed": false,
+					"isHidden": false
+				},
+				{
+					"id": 1,
+					"isClosed": false,
+					"isHidden": false
+				},
+				{
+					"id": 2,
+					"isClosed": true,
+					"isHidden": false
+				},
+				{
+					"id": 3,
+					"isClosed": true,
+					"isHidden": false
+				},
+				{
+					"id": 4,
+					"isClosed": false,
+					"isHidden": false
+				}
+			],
+			"lastOpenedObject": {}
+		},
+		"bafyreifdo6mydq2wnybcggd4lc7xt4r7zp752uh7wwvjs5gwo6meh43izu.2la8hsn8huo8y": {
+			"lastOpenedObject": {
+				"1": {
+					"id": "bafyreihcen5rajfi4eq5i56b257bb5rirfbedmi4zb7aafd3codfljmjia",
+					"layout": 0
+				}
+			}
+		},
+		"bafyreicpuy4felkn66e2ugmixhdkqlrg5lgqkw777czf4ibopd5j67o3ee.xclk38le1liu": {
+			"lastOpenedObject": {}
+		},
+		"": {},
+		"bafyreigzsb3c6vlcrhpbhvx7ijgjw5ydn4rchk5cvpnmewonwxhg6bdz5m.36o49jahby8pm": {
+			"lastOpenedObject": {}
+		},
+		"bafyreieouth7i5ohjymoysdot5i4uppzcafinon73ntsl7nwv7uof45maq.q5coc8rssstc": {
+			"lastOpenedObject": {
+				"1": {
+					"id": "bafyreihctfmcwy2dfeh3pebmjm26jvcvpnibw2x6s22zizlwvyuvhrzitq",
+					"layout": 4
+				}
+			},
+			"widgetSections": [
+				{
+					"id": 0,
+					"isClosed": false,
+					"isHidden": false
+				},
+				{
+					"id": 1,
+					"isClosed": true,
+					"isHidden": false
+				},
+				{
+					"id": 2,
+					"isClosed": false,
+					"isHidden": false
+				},
+				{
+					"id": 3,
+					"isClosed": false,
+					"isHidden": true
+				},
+				{
+					"id": 4,
+					"isClosed": false,
+					"isHidden": false
+				}
+			]
+		},
+		"bafyreicbk74rn7m6iryzhiee62ywcngnbh5iosw5co7qxmiocnxmil3daa.21tntd16p26e2": {
+			"widgetSections": [
+				{
+					"id": 0,
+					"isClosed": false,
+					"isHidden": false
+				},
+				{
+					"id": 1,
+					"isClosed": false,
+					"isHidden": true
+				},
+				{
+					"id": 2,
+					"isClosed": false,
+					"isHidden": false
+				},
+				{
+					"id": 3,
+					"isClosed": false,
+					"isHidden": true
+				},
+				{
+					"id": 4,
+					"isClosed": false,
+					"isHidden": false
+				}
+			],
+			"chat": {
+				"bafyreihdppzmlwcjz6ljzo27idvwb45kxigaapfaj64h2tm62wenhob2ym": {
+					"text": "",
+					"marks": [],
+					"attachments": []
+				}
+			}
+		},
+		"bafyreibxnboe5ov6vg2wldy26f6uuibwdo4dajkzlfgtuv5p74rolaskoi.2dvf1icbowisp": {
+			"sidebarView": "widgets"
+		}
+	},
+	"sidebarData": {
+		"left": {
+			"width": 284,
+			"isClosed": true,
+			"savedClosed": true
+		},
+		"subLeft": {
+			"width": 321,
+			"isClosed": true,
+			"savedClosed": false
+		},
+		"right": {
+			"width": 336,
+			"isClosed": true,
+			"savedClosed": false
+		}
+	},
+	"hideSidebar": false,
+	"dateFormat": 6,
+	"menuSmile": {
+		"tab": 1,
+		"recent": [
+			{
+				"id": "green_salad",
+				"skin": 6
+			},
+			{
+				"id": "smile",
+				"skin": 1
+			}
+		],
+		"skin": 6,
+		"iconColor": 1
+	},
+	"survey": {
+		"0": {
+			"complete": true
+		},
+		"1": {
+			"complete": true
+		},
+		"2": {
+			"time": 1784911453
+		},
+		"3": {
+			"complete": true
+		}
+	},
+	"color": "orange",
+	"bgColor": "pink",
+	"codeLang": "py",
+	"whatsNew": false,
+	"highlights": {
+		"whatsNew": false,
+		"createSpace": false
+	},
+	"calloutIcon": "🥗",
+	"vaultIsMinimal": false,
+	"lastAppVersion": "0.55.5",
+	"notificationSound": "system",
+	"gridTitleClick": true,
+	"fullscreenObject": true,
+	"accountId": "A9ZRRckqJ7r1kcrHbPSzDRE82HRhtjtn9cc6TWZrwhh7yDKV"
+}

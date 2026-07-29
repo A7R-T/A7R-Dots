@@ -1,0 +1,5 @@
+2026/07/24-13:12:34.291 1107 Reusing MANIFEST /home/a7r/.config/anytype/Local Storage/leveldb/MANIFEST-000001
+2026/07/24-13:12:34.306 1107 Recovering log #581
+2026/07/24-13:12:34.307 1107 Level-0 table #584: started
+2026/07/24-13:12:34.310 1107 Level-0 table #584: 28659 bytes OK
+2026/07/24-13:12:34.320 1107 Delete type=0 #581

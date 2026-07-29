@@ -188,3 +188,6 @@ html.themeDark .socialBlock {
   align-items: center !important;
   justify-content: center !important;
 }
+.editorWrapper.isType.withIcon .headSimple .side.left {
+  width: fit-content;
+}
